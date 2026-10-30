@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document Q&amp;A</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Document Q&amp;A</h1>
+    <span id="models" class="muted"></span>
+  </header>
+
+  <main class="layout">
+    <aside class="docs">
+      <h2>Indexed documents</h2>
+      <table id="docs" class="doc-table"></table>
+      <p class="muted small">Converted with the Nutrient Python SDK, split into chunks that keep headings, tables and page numbers.</p>
+    </aside>
+
+    <section class="qa">
+      <form id="askForm" class="ask">
+        <input id="question" type="text" placeholder="Ask a question about the documents" autocomplete="off">
+        <button id="askButton" type="submit">Ask</button>
+      </form>
+      <div id="examples" class="examples"></div>
+
+      <div id="result" hidden>
+        <div class="answer-box">
+          <div class="label">Answer</div>
+          <div id="answer" class="answer"></div>
+          <div id="timing" class="muted small"></div>
+        </div>
+        <h2>Sources</h2>
+        <div id="sources"></div>
+      </div>
+      <div id="status" class="muted"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
